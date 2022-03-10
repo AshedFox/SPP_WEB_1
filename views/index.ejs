@@ -40,7 +40,7 @@
               <form class="form" method="post" action="/add_files" enctype="multipart/form-data">
                 <input name="id" value="<%=tasks[i].id%>" type="text" hidden>
                 <input id="new_file_input" name="new_files" type="file" multiple hidden onchange="this.form.submit()">
-                <button class="add_button" type="button" title="Добавить файл" onclick="document.getElementById('new_file_input').click()">+</button>
+                <button class="add_button" type="button" title="Добавить файл" onclick="this.form.elements['new_file_input'].click()">+</button>
               </form>
               <form class="form" method="post" action="/change_date">
                 <input name="id" value="<%=tasks[i].id%>" type="text" hidden>
